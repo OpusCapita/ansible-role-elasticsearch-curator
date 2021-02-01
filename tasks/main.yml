@@ -45,4 +45,6 @@
     day: "{{ item.day | default('*') }}"
     weekday: "{{ item.weekday | default('*') }}"
     month: "{{ item.month | default('*') }}"
+    cron_file: "{{ item.cron_file | default('') }}"
+    user: "root"
   with_items: "{{ elasticsearch_curator_cron_jobs }}"
